@@ -11,6 +11,9 @@ class SkyHigh : Scenario("SkyHigh") {
 
     override val settings = listOf(time, interval, height, damage)
 
+    override val description: String
+        get() = "After ${time.displayValue()}, all players below y ${height.displayValue()} will take ${damage.value.toDouble() / 2} heart of damage every ${interval.displayValue()}."
+
     override fun onScenarioStart() {
         scheduleEvent(Event(false), time.value.ticks, true)
     }
