@@ -1,8 +1,11 @@
 package me.calebbassham.skyhigh
 
 import me.calebbassham.scenariomanager.api.*
+import me.calebbassham.scenariomanager.api.events.ScenarioEvent
+import me.calebbassham.scenariomanager.api.settings.SimpleScenarioSetting
+import me.calebbassham.scenariomanager.api.settings.timespan.TimeSpanScenarioSetting
 
-class SkyHigh : Scenario("SkyHigh") {
+class SkyHigh : SimpleScenario() {
 
     val time = TimeSpanScenarioSetting("Time", "The time at which players are affected by SkyHigh.", 30 * 60 * 20)
     val interval = TimeSpanScenarioSetting("Interval", "The amount of time between damaging players.", 30 * 20)
